@@ -1,5 +1,5 @@
 [<img src="https://media.giphy.com/media/xUPGcGqQZevNCJeiCA/giphy.gif" width="100%" style="margin: 0 auto">](https://www.themoviedb.org/tv/60573-silicon-valley)
-# Skattetabeller API [INOFFICIAL]
+# Skattesats API [INOFFICIAL]
 
 <table>
 <tr>
@@ -11,9 +11,9 @@
 
 ## Installing
 1. Clone the repository
-`git clone https://github.com/erhuz/skattetabeller-api.git`
+`git clone https://github.com/erhuz/skattesats-api.git`
 2. Move inside the cloned directory and install the NPM Packages
-`cd skattetabeller-api && npm install`
+`cd skattesats-api && npm install`
 3. Set up environment variables such as dev/prod or desired port
 `cp .env.example .env`
 4. Start the application
