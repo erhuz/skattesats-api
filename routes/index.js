@@ -13,4 +13,8 @@ router.get('/years', services.yearsService);
 
 router.get('/municipalities/:year', services.municipalitiesService);
 
+router.get('/assemblies/:municipalities/:year',);
+
+// router.get('/tax/:municipality/:year');
+
 module.exports = router;
