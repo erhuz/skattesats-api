@@ -1,4 +1,3 @@
-// const puppeteer = require('puppeteer');
 const fetch = require('node-fetch');
 const logger = require('../logger');
 
