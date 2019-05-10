@@ -15,6 +15,6 @@ router.get('/municipalities/:year', services.municipalitiesService);
 
 router.get('/assemblies/:municipality/:year', services.assembliesService);
 
-// router.get('/tax/:municipality/:year');
+router.get('/tax/:municipality/:year/:assembly?', services.taxService);
 
 module.exports = router;
