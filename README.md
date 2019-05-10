@@ -1,10 +1,10 @@
 [<img src="https://media.giphy.com/media/xUPGcGqQZevNCJeiCA/giphy.gif" width="100%" style="margin: 0 auto">](https://www.themoviedb.org/tv/60573-silicon-valley)
-# Skattetabeller API
+# Skattetabeller API [INOFFICIAL]
 
 <table>
 <tr>
 <td>
-  [INOFFICIAL] A simplified API to request taxes from different Swedish municipalities. Data retrieved from the Swedish Tax Agency's rest API (Skatteverket.se) 
+  A simplified API to request taxes from different Swedish municipalities. Data retrieved from the Swedish Tax Agency's rest API (Skatteverket.se) 
 </td>
 </tr>
 </table>
