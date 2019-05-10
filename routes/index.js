@@ -13,7 +13,7 @@ router.get('/years', services.yearsService);
 
 router.get('/municipalities/:year', services.municipalitiesService);
 
-router.get('/assemblies/:municipalities/:year',);
+router.get('/assemblies/:municipality/:year', services.assembliesService);
 
 // router.get('/tax/:municipality/:year');
 
