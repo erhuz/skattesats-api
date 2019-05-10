@@ -11,4 +11,6 @@ router.get('/', (req, res) => {
 
 router.get('/years', services.yearsService);
 
+router.get('/municipalities/:year', services.municipalitiesService);
+
 module.exports = router;
