@@ -1,9 +1,9 @@
-// const puppeteer = require('puppeteer');
 const fetch = require('node-fetch');
+const { URL } = require('url');
 const logger = require('../logger');
 
 const yearsService = async (req, res) => {
-  const url = 'https://www.skatteverket.se/st-api/rest/v1/kommuner';
+  const url = new URL('https://www.skatteverket.se/st-api/rest/v1/kommuner');
 
   await fetch(url)
     .then(response => response.json())
