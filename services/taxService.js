@@ -24,8 +24,6 @@ const taxService = async (req, res) => {
         tax: json
       };
 
-      console.log(output);
-
       res.json(output);
     })
     .catch((err) => {

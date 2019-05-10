@@ -16,8 +16,6 @@ const municipalitiesService = async (req, res) => {
         asseblies: json
       };
 
-      console.log(output);
-
       res.json(output);
     })
     .catch((err) => {

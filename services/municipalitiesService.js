@@ -13,16 +13,10 @@ const municipalitiesService = async (req, res) => {
         municipalities: json[year]
       };
 
-      console.log(output);
-
-      // output.municipalities.forEach((name, index) => {
-      //   output.municipalities[index] = name
-      //     .replace('å', 'a')
-      //     .replace('ä', 'a')
-      //     .replace('ö', 'o');
-      // });
-
       res.json(output);
+    })
+    .catch((err) => {
+      logger.error(err);
     });
 };
 

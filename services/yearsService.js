@@ -15,6 +15,9 @@ const yearsService = async (req, res) => {
       logger.debug(json);
 
       res.json(years);
+    })
+    .catch((err) => {
+      logger.error(err);
     });
 };
 
