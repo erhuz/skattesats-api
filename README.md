@@ -4,7 +4,7 @@
 <table>
 <tr>
 <td>
-  A simplified API to request taxrates from different Swedish municipalities. Data retrieved from the Swedish Tax Agency's rest API (Skatteverket.se) 
+  A API middleman that simplifies requests to retrieve taxrates from different Swedish municipalities. Data retrieved from the Swedish Tax Agency's rest API (Skatteverket.se) 
 </td>
 </tr>
 </table>
