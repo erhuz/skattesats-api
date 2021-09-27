@@ -8,6 +8,7 @@ specifiers:
   express: ^4.16.4
   node-fetch: ^2.5.0
   nodemon: ^1.19.0
+  typescript: ^4.4.3
   winston: ^3.2.1
 
 dependencies:
@@ -21,6 +22,7 @@ devDependencies:
   eslint-config-airbnb-base: 13.2.0_08475c87991cdd1be761b362e6a75187
   eslint-plugin-import: 2.24.2_eslint@5.16.0
   nodemon: 1.19.4
+  typescript: 4.4.3
 
 packages:
 
@@ -2750,6 +2752,12 @@ packages:
       media-typer: 0.3.0
       mime-types: 2.1.32
     dev: false
+
+  /typescript/4.4.3:
+    resolution: {integrity: sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
 
   /unbox-primitive/1.0.1:
     resolution: {integrity: sha512-tZU/3NqK3dA5gpE1KtyiJUrEB0lxnGkMFHptJ7q6ewdZ8s12QrODwNbhIJStmJkd1QDXa1NRA8aF2A1zk/Ypyw==}
