@@ -13,10 +13,9 @@ const logger = createLogger({
     format.printf((info) => `${info.timestamp} ${info.level}: ${info.message}`),
   ),
   transports: [
-    //
     // - Write all logs with level `debug` to console
-    // - Write all logs below level `info` to `combined.log`
     // - Write all logs with level `error` (and below) to `error.log`.
+    // - Write all logs below level `info` to `combined.log`
     new transports.Console({
       level: 'debug',
       format: format.combine(
