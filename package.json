@@ -2,10 +2,17 @@
   "name": "skattetabeller-api",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/index.ts",
   "private": true,
   "scripts": {
-    "dev": "nodemon"
+    "dev": "tsc && nodemon",
+    "clean": "rm -fr dist",
+    "build": "pnpm run clean && pnpm run lint && tsc --project tsconfig.build.json && pnpm run bundle:esm && pnpm run bundle:esm:min && pnpm run bundle:umd && pnpm run bundle:umd:min && pnpm run build:stats",
+    "build:stats": "(echo '\\033[35;3m' ; cd dist && ls -lh index*js index*gz | tail -n +2 | awk '{print $5,$9}')",
+    "bundle:esm": "rollup dist/index.js --file dist/index.mjs --format esm",
+    "bundle:esm:min": "terser --ecma 6 --compress --mangle --module -o dist/index.min.mjs -- dist/index.mjs && gzip -9 -c dist/index.min.mjs > dist/index.min.mjs.gz",
+    "bundle:umd": "rollup dist/index.js --file dist/index.umd.js --format umd --name sayHello",
+    "bundle:umd:min": "terser --ecma 6 --compress --mangle -o dist/index.umd.min.js -- dist/index.umd.js && gzip -9 -c dist/index.umd.min.js > dist/index.umd.min.js.gz"
   },
   "repository": {
     "type": "git",
@@ -56,16 +63,21 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
-    "node-fetch": "^2.5.0",
+    "node-fetch": "^3.0.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^16.10.1",
-    "eslint": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-plugin-import": "^2.24.2",
     "nodemon": "^1.19.0",
+    "rollup": "^2.58.0",
+    "terser": "^5.9.0",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   }
