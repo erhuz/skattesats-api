@@ -1,16 +1,16 @@
 const {
   createLogger,
   format,
-  transports
+  transports,
 } = require('winston');
 
 const logger = createLogger({
   level: process.env.NODE_ENV === 'production' ? 'info' : 'debug',
   format: format.combine(
     format.timestamp({
-      format: 'YYYY-MM-DD HH:mm:ss'
+      format: 'YYYY-MM-DD HH:mm:ss',
     }),
-    format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`)
+    format.printf((info) => `${info.timestamp} ${info.level}: ${info.message}`),
   ),
   transports: [
     //
@@ -22,19 +22,19 @@ const logger = createLogger({
       format: format.combine(
         format.colorize(),
         format.printf(
-          info => `${info.timestamp} ${info.level}: ${info.message}`
-        )
-      )
+          (info) => `${info.timestamp} ${info.level}: ${info.message}`,
+        ),
+      ),
     }),
     new transports.File({
       filename: 'logs/error.log',
-      level: 'error'
+      level: 'error',
     }),
     new transports.File({
       filename: 'logs/combined.log',
-      level: 'info'
-    })
-  ]
+      level: 'info',
+    }),
+  ],
 });
 
 process.on('uncaughtException', (error) => {
