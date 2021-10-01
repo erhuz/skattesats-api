@@ -9,6 +9,7 @@ specifiers:
   eslint: ^7.32.0
   eslint-config-airbnb-base: ^14.2.1
   eslint-config-airbnb-typescript: ^14.0.0
+  eslint-import-resolver-typescript: ^2.5.0
   eslint-plugin-import: ^2.24.2
   express: ^4.16.4
   node-fetch: ^3.0.0
@@ -33,6 +34,7 @@ devDependencies:
   eslint: 7.32.0
   eslint-config-airbnb-base: 14.2.1_b7a4de75e7d0094cbe979e30a9a325ab
   eslint-config-airbnb-typescript: 14.0.0_578da72e19327e4b7da4c07f2bd32b7c
+  eslint-import-resolver-typescript: 2.5.0_b7a4de75e7d0094cbe979e30a9a325ab
   eslint-plugin-import: 2.24.2_eslint@7.32.0
   nodemon: 1.19.4
   rollup: 2.58.0
@@ -1058,6 +1060,24 @@ packages:
     dependencies:
       debug: 3.2.7
       resolve: 1.20.0
+    dev: true
+
+  /eslint-import-resolver-typescript/2.5.0_b7a4de75e7d0094cbe979e30a9a325ab:
+    resolution: {integrity: sha512-qZ6e5CFr+I7K4VVhQu3M/9xGv9/YmwsEXrsm3nimw8vWaVHRDrQRp26BgCypTxBp3vUp4o5aVEJRiy0F2DFddQ==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      eslint: '*'
+      eslint-plugin-import: '*'
+    dependencies:
+      debug: 4.3.2
+      eslint: 7.32.0
+      eslint-plugin-import: 2.24.2_eslint@7.32.0
+      glob: 7.2.0
+      is-glob: 4.0.2
+      resolve: 1.20.0
+      tsconfig-paths: 3.11.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /eslint-module-utils/2.6.2:
