@@ -7,10 +7,10 @@ const municipalitiesService = async (req, res) => {
   const { year } = req.params;
 
   await fetch(url)
-    .then(response => response.json())
+    .then((response) => response.json())
     .then((json) => {
       const output = {
-        municipalities: json[year]
+        municipalities: json[year],
       };
 
       res.json(output);

@@ -7,5 +7,5 @@ module.exports = {
   yearsService,
   municipalitiesService,
   assembliesService,
-  taxService
+  taxService,
 };

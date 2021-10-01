@@ -10,10 +10,10 @@ const municipalitiesService = async (req, res) => {
   logger.debug(url);
 
   await fetch(url)
-    .then(response => response.json())
+    .then((response) => response.json())
     .then((json) => {
       const output = {
-        asseblies: json
+        asseblies: json,
       };
 
       res.json(output);

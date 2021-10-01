@@ -18,10 +18,10 @@ const taxService = async (req, res) => {
   logger.debug(url);
 
   await fetch(url)
-    .then(response => response.json())
+    .then((response) => response.json())
     .then((json) => {
       const output = {
-        tax: json
+        tax: json,
       };
 
       res.json(output);

@@ -6,10 +6,10 @@ const yearsService = async (req, res) => {
   const url = new URL('https://www.skatteverket.se/st-api/rest/v1/kommuner');
 
   await fetch(url)
-    .then(response => response.json())
+    .then((response) => response.json())
     .then((json) => {
       const years = {
-        years: Object.keys(json)
+        years: Object.keys(json),
       };
 
       logger.debug(json);
