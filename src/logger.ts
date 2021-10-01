@@ -1,10 +1,11 @@
-const {
+import {
   createLogger,
   format,
+  Logger,
   transports,
-} = require('winston');
+} from 'winston';
 
-const logger = createLogger({
+const logger: Logger = createLogger({
   level: process.env.NODE_ENV === 'production' ? 'info' : 'debug',
   format: format.combine(
     format.timestamp({
@@ -43,4 +44,4 @@ process.on('uncaughtException', (error) => {
 // Logs are written like this:
 // logger.info('Hello log');
 // logger.error('This is an error');
-module.exports = logger;
+export default logger;

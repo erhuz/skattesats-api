@@ -1,15 +1,15 @@
-const fetch = require('node-fetch');
-const { URL } = require('url');
-const logger = require('../logger');
+import fetch from 'node-fetch';
+import { URL } from 'url';
+import logger from '../logger';
 
 const municipalitiesService = async (req, res) => {
   const { municipality, year } = req.params;
 
-  const url = new URL(`https://www.skatteverket.se/st-api/rest/v1/forsamlingar?inkomstar=${year}&kommun=${municipality}`);
+  const url: URL = new URL(`https://www.skatteverket.se/st-api/rest/v1/forsamlingar?inkomstar=${year}&kommun=${municipality}`);
 
   logger.debug(url);
 
-  await fetch(url)
+  await fetch(url.toString())
     .then((response) => response.json())
     .then((json) => {
       const output = {
@@ -23,4 +23,4 @@ const municipalitiesService = async (req, res) => {
     });
 };
 
-module.exports = municipalitiesService;
+export default municipalitiesService;

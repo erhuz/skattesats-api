@@ -1,7 +1,9 @@
-require('dotenv').config();
-const express = require('express');
-const logger = require('./logger');
-const router = require('./routes');
+import express from 'express';
+import dotenv from 'dotenv';
+import logger from './logger';
+import router from './routes';
+
+dotenv.config();
 
 const app = express();
 
