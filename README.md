@@ -35,4 +35,4 @@ This app will host an API that simplifies some of the Swedish Tax Agency's REST 
 * Winston
 
 ## License
-Copyright (c) 2019 [Benjamin Fransson](https://github.com/erhuz)
+MIT License
